@@ -1,0 +1,11 @@
+{
+    "/api": {
+        "target": "https://confeta-test.inplat.ru",
+        "secure": false,
+        "pathRewrite": {
+            "^/api": ""
+        },
+        "changeOrigin": true,
+        "logLevel": "debug"
+    }
+}

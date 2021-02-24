@@ -1,0 +1,14 @@
+<div class="content" *ngIf="{busy: busy$ | async} as vm">
+    <mat-card>
+        <form [formGroup]="form" autocomplete="off">
+            <mat-form-field>
+                <input matInput formControlName="login" placeholder="Login">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput formControlName="password" placeholder="Password" type="password">
+            </mat-form-field>
+
+            <button id="login-button" mat-stroked-button color="primary" [disabled]="form.invalid || vm.busy" (click)="login()">Login</button>
+        </form>
+    </mat-card>
+</div>

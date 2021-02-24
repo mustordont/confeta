@@ -1,6 +1,19 @@
-# Confeta
+# confetaFront
+
+https://confeta-test.inplat.ru/docs
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.1.
+
+## Codegen
+
+[ng-openapi-gen](https://github.com/cyclosproject/ng-openapi-gen)
+
+[ng-swagger-gen](https://github.com/cyclosproject/ng-swagger-gen)
+
+OpenAPIv3 stored at `./tools/openapi.json`
+Codegen configuration: `./tools/ng-openapi-config.json`
+Custom mustache templates for codegen: `./tools/angular-template`
+Run `npm run generate` for the angular codegen.
 
 ## Development server
 

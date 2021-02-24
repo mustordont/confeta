@@ -1,0 +1,11 @@
+// Create your Sass color vars (will be available in all the project)
+$primary-color: #00aeef;
+$accent-color: #4caf50;
+$warn-color: #f44336;
+$gray-color: gainsboro;
+
+$toolbar-height: 64px;
+$padding: 20px;
+$content-height: calc(100vh - #{$toolbar-height} - #{$padding * 2});
+
+$duration: 0.35s;

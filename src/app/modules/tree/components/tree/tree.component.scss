@@ -1,0 +1,18 @@
+@import "mixins";
+
+:host {
+    .item {
+        @include actionButton();
+        cursor: pointer;
+
+        &:hover {
+            background-color: $primary-color;
+            .mat-cell {
+                color: white;
+                a {
+                    color: white;
+                }
+            }
+        }
+    }
+}

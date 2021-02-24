@@ -1,0 +1,35 @@
+@import 'variables';
+
+$toolbar-height-with-padding: $toolbar-height + $padding;
+
+:host {
+    display: block;
+
+    .loading-placeholder {
+        position: fixed;
+        display: block;
+        height: 2px;
+        width: 100%;
+        overflow: hidden;
+        z-index: 101;
+        top: $toolbar-height;
+    }
+
+    .mat-drawer-container {
+        .main-toolbar {
+            position: fixed;
+            z-index: 100;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            max-height: calc(100vh - #{$toolbar-height-with-padding});
+            min-height: calc(100vh - #{$toolbar-height-with-padding});
+            overflow-y: auto;
+            margin-top: $toolbar-height-with-padding;
+            padding: 0 $padding $padding $padding;
+        }
+    }
+
+}

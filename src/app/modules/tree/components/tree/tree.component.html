@@ -1,0 +1,68 @@
+<mat-toolbar>
+    <div class="flex"></div>
+    <button mat-button (click)="editNode()">
+        <mat-icon color="primary">
+            add
+        </mat-icon>
+        new node
+    </button>
+</mat-toolbar>
+
+<mat-table [dataSource]="data$" class="mat-elevation-z1 content">
+    <ng-container matColumnDef="id">
+        <mat-header-cell *matHeaderCellDef>ID</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="kind">
+        <mat-header-cell *matHeaderCellDef>Kind</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.kind}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+        <mat-cell *matCellDef="let element">
+            <a [routerLink]="element.path">
+                {{element.name}}
+            </a>
+        </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="description">
+        <mat-header-cell *matHeaderCellDef>Description</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.description}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="value">
+        <mat-header-cell *matHeaderCellDef>Value</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.value}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="version">
+        <mat-header-cell *matHeaderCellDef>version</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.version}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="created">
+        <mat-header-cell *matHeaderCellDef>created</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.created_at | date}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="updated">
+        <mat-header-cell *matHeaderCellDef>updated</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.modified_at | date}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+        <mat-cell *matCellDef="let element">
+            <div class="flex"></div>
+            <mat-icon class="action" color="warn" (click)="delete(element); $event.stopPropagation();">
+                delete
+            </mat-icon>
+        </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>
+    <mat-row class="item" (click)="editNode(row)" *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>

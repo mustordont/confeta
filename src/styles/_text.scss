@@ -1,0 +1,16 @@
+.ellipsis {
+    position: relative;
+    &:before {
+        content: '&nbsp;';
+        visibility: hidden;
+    }
+
+    .content {
+        position: absolute;
+        left: 0;
+        right: 0;
+        white-space: nowrap; /* Запрещаем перенос строк */
+        overflow: hidden; /* Обрезаем все, что не помещается в область */
+        text-overflow: ellipsis;
+    }
+}

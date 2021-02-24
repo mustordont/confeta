@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    //noinspection CssUnknownProperty
+    -webkit-focus-ring-color: rgba(255, 255, 255, 0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* prevent tap highlight color / shadow */
+    -webkit-touch-callout: none; /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none; /* prevent webkit from resizing text to fit */
+    //-webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+}
+
+*:active,
+*:focus,
+*:hover {
+    outline: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 400;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+img {
+    border: 0;
+}
+
+a {
+    background: transparent;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+}
+
+input,
+textarea {
+    resize: none;
+    user-select: text;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+html, body {
+    height: 100vh;
+}

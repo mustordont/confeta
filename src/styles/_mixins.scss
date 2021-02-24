@@ -1,0 +1,35 @@
+@import './variables';
+
+@mixin transition($customDuration: $duration) {
+    transition: all $customDuration ease-in;
+}
+
+@mixin textWrap() {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin actionButton() {
+    .action {
+        @include transition();
+        opacity: 0;
+    }
+
+    &:hover {
+        .action {
+            opacity: 1;
+        }
+    }
+}
+
+@mixin mainContent() {
+    .main-content {
+             border: 1px solid rgba(0,0,0,.03);
+             box-shadow: 0 2px 2px rgba(0,0,0,.24), 0 0 2px rgba(0,0,0,.12);
+
+             padding-top: 0;
+             margin-top: 8px;
+         }
+}
+

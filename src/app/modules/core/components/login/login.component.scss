@@ -1,0 +1,14 @@
+@import 'variables';
+
+:host {
+    margin: 0 auto;
+    max-width: 640px;
+    position: relative;
+
+    .content {
+        height: $content-height;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

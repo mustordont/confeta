@@ -1,0 +1,7 @@
+{
+    "$schema": "../node_modules/ng-openapi-gen/ng-openapi-gen-schema.json",
+    "input": "./tools/openapi.json",
+    "output": "./src/app/modules/api",
+    "ignoreUnusedModels": false,
+    "templates": "./tools/angular-templates"
+}
